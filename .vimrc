@@ -16,7 +16,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 " View marks
 Plugin 'kshenoy/vim-signature'
-
 " CtrlP
 Plugin 'kien/ctrlp.vim'
 " The following are examples of different formats supported.
@@ -50,7 +49,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 colorscheme Benokai
 
 " Get rid of user defined pattern issue
@@ -79,5 +77,8 @@ nnoremap <tab> <C-w>w
 " disable expanding tabs for make files
 autocmd FileType make set noexpandtab
 
-" clear the preview window
+" clear the preview window in YCM
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" enable line mode in CtrlP
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
