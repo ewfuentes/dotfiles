@@ -81,4 +81,7 @@ autocmd FileType make set noexpandtab
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " enable line mode in CtrlP
-let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+let g:ctrlp_extensions = ['buffertag', 'line', 'dir']
+
+" keep YCM from confirming whether or not it is okay to load conf file
+let g:ycm_confirm_extra_conf = 0
