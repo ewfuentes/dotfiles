@@ -19,6 +19,9 @@ Plugin 'kshenoy/vim-signature'
 
 " CtrlP
 Plugin 'kien/ctrlp.vim'
+
+" Status line upgrade
+Plugin 'vim-airline/vim-airline'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -53,15 +56,21 @@ filetype plugin indent on    " required
 
 colorscheme Benokai
 
+" Enable highlighting of current line
+set cursorline
+
 " Get rid of user defined pattern issue
 set shortmess+=c
 
 " Enable Line Numbers
 set number
 
+" Enable UTF-8
+set encoding=utf-8
+
 " Expand Tabs
 set expandtab
-set tabstop=8
+set tabstop=4
 set softtabstop=0
 set shiftwidth=4
 set smarttab
@@ -81,3 +90,26 @@ autocmd FileType make set noexpandtab
 
 " clear the preview window
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Enable search line mode
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+
+" Always show the status line
+set laststatus=2
+
+let g:airline_powerline_fonts=1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
