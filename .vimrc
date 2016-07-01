@@ -16,12 +16,13 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 " View marks
 Plugin 'kshenoy/vim-signature'
-
 " CtrlP
 Plugin 'kien/ctrlp.vim'
-
+" Vinegar
+Plugin 'tpope/vim-vinegar'
 " Status line upgrade
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -54,8 +55,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-colorscheme Benokai
-
+colorscheme PaperColor
+let g:airline_theme='papercolor'
 " Enable highlighting of current line
 set cursorline
 
@@ -68,12 +69,6 @@ set number
 " Enable UTF-8
 set encoding=utf-8
 
-" Expand Tabs
-set expandtab
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
-set smarttab
 " Don't write extra files
 set nobackup
 set nowb
@@ -84,9 +79,11 @@ syntax on
 
 " Switch panes using tab in normal mode
 nnoremap <tab> <C-w>w
+" map
+nnoremap ,g :YcmCompleter GoToDefinition<CR> 
 
 " disable expanding tabs for make files
-autocmd FileType make set noexpandtab
+autocmd FileType make setlocal noexpandtab
 
 " clear the preview window
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -113,3 +110,14 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+" Expand Tabs
+set expandtab
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set smarttab
+
+" Change where splits are made
+set splitbelow
+set splitright
