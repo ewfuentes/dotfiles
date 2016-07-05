@@ -8,7 +8,7 @@ if has("win32")
     call vundle#begin('$USERPROFILE/vimfiles/bundle')
 elseif has("unix")
     let s:uname = system("uname -s")
-    if s:uname = "Darwin"
+    if s:uname == "Darwin"
         " Do Mac Stuff here
     endif
     set rtp+=~/.vim/bundle/Vundle.vim
