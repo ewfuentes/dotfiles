@@ -93,6 +93,11 @@ set nobackup
 set nowb
 set noswapfile
 
+" On windows (and potentially other platforms), VIM might keep you from 
+" using backspace to delte text before the insert location. This forces
+" VIM to allow you to do so.
+set backspace=indent,eol,start
+
 " Syntax highlighting on
 syntax on
 
