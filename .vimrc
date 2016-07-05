@@ -19,8 +19,10 @@ Plugin 'kshenoy/vim-signature'
 
 " CtrlP
 Plugin 'kien/ctrlp.vim'
+" NerdTree
+Plugin 'scrooloose/nerdtree'
 " Vinegar
-Plugin 'tpope/vim-vinegar'
+Plugin 'dhruvasagar/vim-vinegar'
 " Status line upgrade
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -95,9 +97,11 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " Enable search line mode
 let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+let g:ctrlp_extensions = ['tag', 'line', 'dir']
+let g:ctrlp_working_path_mode = 'ra'
 
 " Always show the status line
+
 set laststatus=2
 
 let g:airline_powerline_fonts=1
