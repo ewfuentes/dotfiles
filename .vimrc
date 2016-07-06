@@ -118,19 +118,28 @@ let g:ctrlp_working_path_mode = 'ra'
 " Always show the status line
 
 set laststatus=2
+if has("unix")
+    let g:airline_powerline_fonts=1
 
-let g:airline_powerline_fonts=1
+    if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+    endif
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
+    " unicode symbols
+    " powerline symbols
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
+elseif has("win32")
+    let g:airline_powerline_fonts = 0
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    if has("gui_running")
+        set guifont=Consolas:h10:cANSI
+    endif
 endif
 
-" unicode symbols
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
