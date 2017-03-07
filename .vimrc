@@ -35,6 +35,10 @@ Plugin 'dhruvasagar/vim-vinegar'
 " Status line upgrade
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Go autocomplete
+Plugin 'fatih/vim-go'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
