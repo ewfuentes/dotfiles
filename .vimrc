@@ -35,6 +35,10 @@ Plugin 'dhruvasagar/vim-vinegar'
 " Status line upgrade
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Go autocomplete
+Plugin 'fatih/vim-go'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -67,9 +71,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-colorscheme PaperColor
-set background=light
-let g:airline_theme='papercolor'
+colorscheme molokai
+set background=dark
+let g:airline_theme='hybrid'
 " Enable highlighting of current line
 set cursorline
 
@@ -81,6 +85,9 @@ set number
 
 " Enable UTF-8
 set encoding=utf-8
+
+" Ignore case when searching
+set ignorecase
 
 " Expand Tabs
 set expandtab
