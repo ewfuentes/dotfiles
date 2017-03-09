@@ -147,6 +147,7 @@ elseif has("win32")
     let g:airline_right_sep = ''
     if has("gui_running")
         set guifont=Consolas:h10:cANSI
+        set mouse=c
     endif
 endif
 
