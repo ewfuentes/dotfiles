@@ -10,6 +10,7 @@ elseif has("unix")
     let s:uname = system("uname -s")
     if s:uname == "Darwin"
         " Do Mac Stuff here
+        set clipboard=unnamed
     endif
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
